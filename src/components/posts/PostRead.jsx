@@ -11,7 +11,7 @@ const PostRead = ({match, history}) => {
     const getPost = async() => {
         setLoading(true);
         const result = await getDoc(doc(db, `posts/${id}`));
-        setPost(result.data());
+        setPost(result.data()); 
         setLoading(false);
     }
     const onDelete = async() => {
